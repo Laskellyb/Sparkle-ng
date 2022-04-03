@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4F8008;
+  --secondary-color: #97D700;
+  --black-color: #000;
+  --bg-color: #FFFFFF;
+  --bold-text-color: #315169;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header img {
+  width: 120px;
+}
+
+.header .top {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--black-color);
+  padding: 30px 0;
+  margin-right: 0 20px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header .top-left {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+}
+
+.header a{
+  text-decoration:none;
+  color: white;
+}
+
+.header #first-child {
+  color: var(--primary-color);
+}
+
+.header #last-type {
+  background-color: var(--secondary-color);
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.header #last-type:hover {
+  background-color: var(--primary-color);
+}
+
+.header li {
+  display: inline;
+  padding-right: 20px;
+}
+
+.header .bottom {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.header .bottom:hover{
+  cursor: pointer;
+  background-color: #60a301;
+}
+
+/* Showcase area */
+.showcase {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--black-color);
+  color: white;
+  padding: 100px 100px 20px;
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+.showcase .showcase-left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.showcase .showcase-left h1 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 3rem;
+  width: 60%;
+}
+
+.showcase .showcase-left img {
+  display: inline;
+  width:10vw;
+}
+
+.showcase .showcase-left p {
+  width: 60%;
+}
+
+/* .showcase .showcase-right {
+  flex: 1;
+  animation-name: content;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0% {left: -1000px;}
+    100% {left: 0;}
+} */
