@@ -123,17 +123,9 @@ body {
   width: 60%;
 }
 
-/* .showcase .showcase-right {
+.showcase .showcase-right {
   flex: 1;
-  animation-name: content;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
 }
-
-@keyframes content {
-    0% {left: -1000px;}
-    100% {left: 0;}
-} */
 
 /* About us */
 .container {
@@ -145,6 +137,7 @@ body {
   margin-top: 50px;
   justify-content: space-around;
 }
+
 
 .container-flex {
   display: flex;
@@ -233,12 +226,15 @@ body {
 
 /* Footer */
 .footer {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
   background-color: #000;
   color: white;
-  padding: 50px 100px;
+  padding-top: 50px;
+  padding-left: 100px;
   line-height: 3rem;
+  justify-items: center;
 }
 
 .footer a{
@@ -256,24 +252,16 @@ body {
 }
 
 .footer p:first-of-type {
-  width: 60%;
   line-height:1.5rem;
-}
-
-.footer div:first-of-type{
-  flex:2;
-}
-
-.footer div:nth-of-type(2),
-.footer div:nth-of-type(4),
-.footer div:last-of-type {
-  flex: 1;
 }
 
 .footer div:nth-of-type(3){
   display: flex;
-  flex:2;
-  margin-right: 20px;
+  gap:20px;
+}
+
+.footer div:last-of-type{
+  justify-self: start;
 }
 
 /* Footer 2 */
@@ -285,4 +273,65 @@ body {
 
 .footer-2 img {
   width: 100px;
+}
+
+@media (max-width: 700px){
+  .header .top{
+    flex-direction: column;
+  }
+
+  .header a {
+    display: none;
+  }
+
+  .showcase {
+    flex-direction: column-reverse;
+    font-size: 16px;
+    padding: auto;
+    margin: auto;
+    border-bottom-left-radius: 20%;
+  }
+
+  .showcase .showcase-left h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 3rem;
+    width: 100vw;
+  }
+
+  .showcase .showcase-left p {
+    width: 100vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 400px;
+  
+  }
+
+  .p-text {
+    color: var(--bold-text-color);
+    font-size: 25px;
+    font-weight: 850;
+    line-height: 2rem;
+    width: 100vw;
+    padding-right: 90px;;
+  }
+
+  .p-light-text,
+  .h4-text,
+  .learn-more {
+    width: 100vw;
+    padding-right: 100px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: left;
+  }
 }
