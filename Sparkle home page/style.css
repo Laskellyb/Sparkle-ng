@@ -94,6 +94,12 @@ body {
   background-color: #60a301;
 }
 
+/* Menu */
+.sidebar,
+.close-btn {
+  display: none;
+}
+
 /* Showcase area */
 .showcase {
   display: flex;
@@ -117,7 +123,8 @@ body {
   font-size: 50px;
   font-weight: 800;
   line-height: 3rem;
-  width: 60%;
+  width: 80%;
+  padding-bottom: 20px;
 }
 
 .showcase .showcase-left img {
@@ -126,7 +133,8 @@ body {
 }
 
 .showcase .showcase-left p {
-  width: 60%;
+  width: 80%;
+  padding-bottom: 20px;
 }
 
 .showcase .showcase-right {
@@ -230,6 +238,11 @@ body {
   background-color: var(--bg-color);
 }
 
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Footer */
 .footer {
   display: grid;
@@ -283,18 +296,56 @@ body {
 
 @media (max-width: 700px) {
   .header .top {
-    /* flex-direction: column; */
     height: 20px;
   }
 
   .header .menu {
     display: inline;
+    font-size: 1.5rem;
   }
 
   .header a {
     display: none;
   }
 
+  /* Aside */
+  .sidebar {
+    background-color: #000;
+    color: white;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 3rem;
+    transform: translate(-100%);
+    height: 0;
+  }
+
+  .sidebar p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .sidebar .upper {
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  /* Show sidebar */
+  .show-sidebar {
+    transform: translate(0);
+    height: 100vh;
+    display: inline;
+  }
+
+  /* Remove sidebar - works without this
+  .sidebar-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+} */
+
+  /* Showcase */
   .showcase {
     flex-direction: column-reverse;
     font-size: 16px;
@@ -309,12 +360,15 @@ body {
     font-weight: 800;
     line-height: 3rem;
     width: 100vw;
+    padding-bottom: 20px;
   }
 
   .showcase .showcase-left p {
-    width: 100vw;
+    width: 90vw;
+    padding-bottom: 20px;
   }
 
+  /* Container */
   .container {
     display: flex;
     flex-direction: column-reverse;
@@ -322,6 +376,7 @@ body {
     padding-left: 30px;
   }
 
+  /* Texts */
   .p-text {
     color: var(--bold-text-color);
     font-size: 25px;
@@ -341,10 +396,37 @@ body {
 
   .card {
     width: 100%;
+    margin-left: 5px;
+  }
+
+  .card .p-light-text {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .card img {
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
   }
 
   .footer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: left;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  .footer div:first-of-type,
+  .footer div:nth-of-type(2),
+  .footer div:nth-of-type(3) {
+    grid-column: 1 /span 2;
+  }
+
+  .footer .features {
+    width: 100vw;
+    gap: 30px;
+    justify-content: space-between;
+    padding-right: 120px;
   }
 }
