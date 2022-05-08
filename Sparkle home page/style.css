@@ -368,11 +368,23 @@ body {
     padding-bottom: 20px;
   }
 
+  .showcase .playstore {
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .showcase .showcase-left img {
+    width: 30vw;
+  }
+
   /* Container */
   .container {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 400px;
+    margin-top: 100px;
     padding-left: 30px;
   }
 
@@ -428,5 +440,16 @@ body {
     gap: 30px;
     justify-content: space-between;
     padding-right: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin-bottom: 150px;
+    margin-top: auto;
+  }
+
+  #sparkle-cards {
+    padding-top: 50px;
   }
 }
